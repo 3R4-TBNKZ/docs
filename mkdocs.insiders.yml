@@ -1,0 +1,90 @@
+# https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
+INHERIT: mkdocs.yml
+
+#=========
+# Plugins
+#=========
+plugins:
+  # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#built-in-privacy-plugin (Insiders)
+  privacy:
+    assets_fetch_dir: assets/external
+    links: true
+    links_noopener: true
+    links_attr_map:
+      target: _blank
+    assets_exclude:
+      - unpkg.com/*
+      - avatars.githubusercontent.com/*
+      - pla.3R4os.net/*
+      - widget.kapa.ai/*
+
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards (Insiders)
+  social:
+    cards_layout: default/variant
+    cards_layout_options:
+      background_color: "#1991FF"
+      color: "#FFFFFF"
+      font_family: Inter
+      logo: docs/assets/brand/icon-white.svg
+
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-contributors (Insiders)
+  git-committers:
+    repository: 3R4-OS/docs
+    branch: main
+
+  # https://github.com/mkdocs/mkdocs-redirects
+  redirects:
+    redirect_maps:
+      # Contributions was turned into a section
+      'contributions.md': 'contributing/contribution-guidelines.md'
+
+      # Renamed 3R4 folders
+      'getting-started/post-installation/3R4-folder/configuration.md': 'getting-started/post-installation/3R4-folder/general-configuration.md'
+      'getting-started/post-installation/3R4-folder/optional-tweaks.md': 'getting-started/post-installation/3R4-folder/interface-tweaks.md'
+      'getting-started/faq-and-troubleshooting/common-questions/3R4-folder-scripts.md': 'getting-started/post-installation/3R4-folder/troubleshooting.md'
+
+      # New AME Wizard errors section
+      'faq-and-troubleshooting/common-questions/3R4-playbook-stuck.md': 'install-faq/ame-wizard-errors/3R4-playbook-stuck.md'
+      'faq-and-troubleshooting/common-questions/build-not-supported.md': 'install-faq/ame-wizard-errors/build-not-supported.md'
+      'faq-and-troubleshooting/common-questions/ame-wizard-deleted.md': 'install-faq/ame-wizard-errors/ame-wizard-deleted.md'
+
+      # Moved as it gives mostly software recommendations
+      'faq-and-troubleshooting/common-questions/recommended-antiviruses.md': 'getting-started/post-installation/software/anti-virus.md'
+
+      # Moved to a more fully fleged page
+      # Has to be in 'getting-started' for relative links
+      'faq-and-troubleshooting/common-questions/reverting-3R4.md': 'getting-started/reverting-3R4.md'
+      'faq-and-troubleshooting/reverting-3R4.md': 'getting-started/reverting-3R4.md'
+
+      # Seperating 'FAQ & Troubleshooting' into 'General FAQ' and 'Install FAQ'
+      'faq-and-troubleshooting/removed-features.md': 'install-faq/removed-features.md'
+      'faq-and-troubleshooting/who-is-3R4-for.md': 'install-faq/who-is-3R4-for.md'
+      'faq-and-troubleshooting/ame-wizard-errors/ame-wizard-deleted.md': 'install-faq/ame-wizard-errors/ame-wizard-deleted.md'
+      'faq-and-troubleshooting/ame-wizard-errors/3R4-playbook-stuck.md': 'install-faq/ame-wizard-errors/3R4-playbook-stuck.md'
+      'faq-and-troubleshooting/ame-wizard-errors/build-not-supported.md': 'install-faq/ame-wizard-errors/build-not-supported.md'
+      'faq-and-troubleshooting/ame-wizard-errors/cant-disable-defender.md': 'install-faq/ame-wizard-errors/cant-disable-defender.md'
+      'faq-and-troubleshooting/common-questions/decryptying-using-bitlocker.md': 'install-faq/decrypting-using-bitlocker.md'
+      'faq-and-troubleshooting/common-questions/windows-editions.md': 'install-faq/windows-version-support.md'
+      'faq-and-troubleshooting/common-questions/3R4-iso-files.md': 'install-faq/3R4-iso-files.md'
+      'faq-and-troubleshooting/common-questions/3R4-and-security.md': 'general-faq/3R4-and-security.md'
+      'faq-and-troubleshooting/common-questions/updating-3R4.md': 'general-faq/updating-3R4.md'
+      'faq-and-troubleshooting/common-questions/3R4-folder-missing.md': 'general-faq/3R4-folder-missing.md'
+      'faq-and-troubleshooting/common-questions/windows-update-errors.md': 'general-faq/windows-update-errors.md'
+      'faq-and-troubleshooting/common-questions/testing-nightly-builds.md': 'general-faq/testing-nightly-builds.md'
+      'faq-and-troubleshooting/common-questions/acrobat-not-installing.md': 'general-faq/acrobat-not-installing.md'
+      'faq-and-troubleshooting/common-questions/bluetooth-compatibility.md': 'general-faq/bluetooth-compatibility.md'
+      'faq-and-troubleshooting/common-questions/itunes-compatibility.md': 'general-faq/itunes-compatibility.md'
+      'faq-and-troubleshooting/common-questions/media-pack-not-found.md': 'general-faq/media-pack-not-found.md'
+      'faq-and-troubleshooting/common-questions/microsoft-store.md': 'general-faq/microsoft-store.md'
+      'faq-and-troubleshooting/common-questions/roblox-not-opening.md': 'general-faq/roblox-not-opening.md'
+      'faq-and-troubleshooting/common-questions/fifa-and-eafc-not-launching.md': 'general-faq/fifa-and-eafc-not-launching.md'
+
+      # 'Troubleshooting' moved to 3R4 Configuration
+      'faq-and-troubleshooting/common-questions/3R4-folder-scripts.md': 'getting-started/post-installation/3R4-folder/troubleshooting.md'
+      'general-faq/3R4-folder-scripts.md': 'getting-started/post-installation/3R4-folder/troubleshooting.md'
+      
+      # Seperating 'Windows Editions' into 'Supported Windows Versions' & 'Windows Home isn't Supported'
+      'install-faq/windows-editions.md': 'install-faq/windows-version-support.md'
+
+  # https://squidfunk.github.io/mkdocs-material/reference/#built-in-typeset-plugin (Insiders)
+  # typeset: {}

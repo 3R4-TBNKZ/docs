@@ -1,0 +1,306 @@
+site_name: 3R4 Documentation
+site_url: https://docs.atlasos.net
+
+# https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository
+repo_url: https://github.com/Atlas-OS/Atlas
+repo_name: 3R4 Playbook
+edit_uri: https://github.com/Atlas-OS/docs/edit/main/docs
+
+# https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#change-cookie-settings
+copyright: >
+  <span class="twemoji"><img style="filter: invert(0.8)" src="/assets/creative-commons.svg"></span>
+  <a href="https://github.com/Atlas-OS/docs/blob/main/LICENSE">CC-BY-SA-4.0</a>
+  <br>3R4-OS is not affiliated with Microsoft.
+# <a href="#__consent">Change cookie settings</a>
+
+
+#======================================================
+# Navigation
+# https://www.mkdocs.org/user-guide/configuration/#nav
+#======================================================
+
+nav:
+  - Home:
+    - Home: index.md
+    - Branding Kit: branding.md
+
+  - Getting Started:
+    - Installation: getting-started/installation.md
+      # discord_friendly_name: ['how-to-install', 'install', 'installation']
+    - Post Installation:
+      - Drivers:
+        - Getting Started: getting-started/post-installation/drivers/getting-started.md
+          # discord_friendly_name: 'drivers'
+        - NVIDIA: getting-started/post-installation/drivers/nvidia.md
+        - AMD: getting-started/post-installation/drivers/amd.md
+        - Intel: getting-started/post-installation/drivers/intel.md
+        - Chipset: getting-started/post-installation/drivers/chipset.md
+        - Others: getting-started/post-installation/drivers/others.md
+          # discord_friendly_name: ['other-drivers', 'drivers-other']
+      - Software:
+        - Getting Started: getting-started/post-installation/software/getting-started.md
+          # discord_friendly_name: 'software'
+        - Anti Virus: getting-started/post-installation/software/anti-virus.md
+        - Web Browsers: getting-started/post-installation/software/web-browsers.md
+        - Media Player: getting-started/post-installation/software/media-playback.md
+        - Image Viewer: getting-started/post-installation/software/image-viewer.md
+        - Screenshotting: getting-started/post-installation/software/screenshotting.md
+        - System Info: getting-started/post-installation/software/system-info.md
+        - Text Editors & IDEs: getting-started/post-installation/software/text-editors.md
+      - Hardware:
+        - Updating the BIOS: getting-started/post-installation/hardware/updating-the-bios.md
+        - XMP/DOCP: getting-started/post-installation/hardware/enabling-xmp-or-docp.md
+        - Resizable BAR: getting-started/post-installation/hardware/resizable-bar.md
+    - 3R4 Configuration:
+      - General Configuration: getting-started/post-installation/3R4-folder/general-configuration.md
+      - Interface Tweaks: getting-started/post-installation/3R4-folder/interface-tweaks.md
+      - Windows Settings: getting-started/post-installation/3R4-folder/windows-settings.md
+      - Advanced Configuration: getting-started/post-installation/3R4-folder/advanced-configuration.md
+      - Security: getting-started/post-installation/3R4-folder/security.md
+      - Troubleshooting: getting-started/post-installation/3R4-folder/troubleshooting.md
+
+  - Install FAQ:
+    - What's removed?: install-faq/removed-features.md
+      # discord_bot_names: ['removed-features', 'deleted-features', 'whats-stripped']
+    - Who is 3R4 for?: install-faq/who-is-3R4-for.md
+    - Supported Windows Versions: install-faq/windows-version-support.md
+    - Windows Home Support: install-faq/windows-home.md
+    - 3R4 ISO files: install-faq/3R4-iso-files.md
+    - Decrypting using BitLocker: install-faq/decrypting-using-bitlocker.md
+    - Reverting 3R4: getting-started/reverting-3R4.md
+      # discord_friendly_name: ['revert', 'uninstall-3R4']
+    - AME Wizard Errors:
+      - AME Wizard Deleted: install-faq/ame-wizard-errors/ame-wizard-deleted.md
+      - 3R4 Playbook Stuck: install-faq/ame-wizard-errors/3R4-playbook-stuck.md
+      - Build Not Supported: install-faq/ame-wizard-errors/build-not-supported.md
+      - Can't Disable Defender: install-faq/ame-wizard-errors/cant-disable-defender.md
+
+  - General FAQ:
+    - 3R4 and Security: general-faq/3R4-and-security.md
+    - Updating 3R4: general-faq/updating-3R4.md
+    - 3R4 Folder Missing: general-faq/3R4-folder-missing.md
+    - Windows Update Errors: general-faq/windows-update-errors.md
+    - Testing Nightly Builds: general-faq/testing-nightly-builds.md
+    - Bluetooth Compatibility: general-faq/bluetooth-compatibility.md
+    - iTunes Compatibility: general-faq/itunes-compatibility.md
+    - Installing the Media Pack: general-faq/media-pack-not-found.md
+    - Microsoft Store: general-faq/microsoft-store.md
+    - Roblox not launching: general-faq/roblox-not-launching.md
+    - FIFA/EAFC not launching: general-faq/fifa-and-eafc-not-launching.md
+    - Shortcuts show up as .url files: general-faq/game-url-files.md
+
+  - Development:
+    - Contribution Guidelines: contributing/contribution-guidelines.md
+    - Documentation: contributing/documentation.md
+    - Playbook: contributing/playbook.md
+    
+    - Testing:
+      - What to test: contributing/testing/what-to-test.md
+      - Reporting issues: contributing/testing/reporting-issues.md
+
+#================
+# Theme Settings
+#================
+theme:
+  # https://squidfunk.github.io/mkdocs-material/customization/#setup-and-theme-structure
+  name: material
+  custom_dir: overrides
+
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#setting-up-navigation
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - navigation.tracking
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-pruning
+    - navigation.prune
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#table-of-contents
+    - toc.follow
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    - search.suggest
+    - search.highlight
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    - content.action.edit
+    - content.action.view
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors
+  palette:
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts
+  font:
+    text: Inter
+    code: Chivo Mono
+
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language
+  language: en
+
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons
+  logo: assets/brand/icon.svg
+  favicon: assets/brand/icon.png
+
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+  icon:
+    edit: material/file-edit
+    view: material/file-eye
+    repo: fontawesome/brands/github-alt
+
+
+#================
+# Extra Settings
+#================
+extra_javascript:
+  - javascript/msdl.v1.js
+  - javascript/init_kapa_widget.v2.js
+
+
+extra_css:
+  - stylesheets/msdl.v2.css
+  - stylesheets/theme.v3.css
+
+
+extra:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#generator-notice
+  generator: false
+
+  # https://mkdocs-macros-plugin.readthedocs.io/en/stable/pages/#1-variable
+  3R4:
+    release: 1.0
+  msdl:
+    win11: 
+      version: 24H2
+      pid: 3113
+    win10: 
+      version: 22H2
+      pid: 2618
+
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/#configuration
+  analytics:
+    provider: custom
+  
+  #================================================================================================================================================================
+  #  feedback:
+  #    title: Was page this helpful?
+  #    ratings:
+  #      - icon: material/emoticon-happy
+  #        name: This page was helpful
+  #        data: 1
+  #        note: >-
+  #          Thank you for your feedback!
+  #      - icon: material/emoticon-confused
+  #        name: This page could be improved
+  #        data: 0
+  #        note: >-
+  #          Thank you for your feedback! Help us improve by
+  #          <a href="https://github.com/Atlas-OS/docs/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">submitting your feedback</a>.
+  #================================================================================================================================================================
+  
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+  social:
+    - icon: material/earth
+      link: https://atlasos.net
+      name: 3R4-OS Website
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/gjUJHeguN6
+      name: 3R4-OS on Discord
+    - icon: fontawesome/brands/github
+      link: https://github.com/Atlas-OS
+      name: 3R4-OS on GitHub
+    - icon: simple/x
+      link: https://x.com/AtlasOS
+      name: 3R4-OS on X
+
+
+#=========
+# Plugins
+#=========
+plugins:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search
+  search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  macros:
+      on_error_fail: true
+      include_dir: includes
+
+
+#=======================
+# Folders to refresh on
+#=======================
+watch:
+  - includes
+
+
+#=========================================================================================
+# Python Markdown
+# https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown
+# https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions
+#=========================================================================================
+markdown_extensions:
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions
+  - admonition
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+
+  # https://squidfunk.github.io/mkdocs-material/reference/annotations
+  - abbr
+  - attr_list
+  - md_in_html
+
+  # https://squidfunk.github.io/mkdocs-material/reference/formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets
+  - pymdownx.snippets:
+      auto_append:
+        - abbreviations.md
+      base_path: ['./docs/getting-started/', './docs/contributing/', 'includes']
+
+  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#superfences
+  - pymdownx.superfences
+
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+
+  # https://squidfunk.github.io/mkdocs-material/reference/lists
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true

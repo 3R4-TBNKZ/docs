@@ -1,0 +1,8 @@
+# This is the list of dependencies needed to run the project
+# You can install them all by running `pip install -r requirements.txt`
+# You should also include the version number so that you get the same version as the one that was used to develop the project
+
+git+https://${3R4-TBNKZ}@github.com/3R4-TBNKZ?tab=repositories/mkdocs-material-insiders.git
+
+# Everything else needed
+-r base-requirements.txt
