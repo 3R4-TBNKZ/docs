@@ -1,9 +1,9 @@
 # 3R4-OS Documentation
 
-<a href="https://github.com/3R4-TBNKZ/.github/blob/main/profile/CODE_OF_CONDUCT.md"><img alt="Code of Conduct" src="https://github.com/3R4-TBNKZ/Book-s/blob/main/static/image/preview-banner-v1.png"></a>
+<img alt="Code of Conduct" src="https://github.com/3R4-TBNKZ/Book-s/blob/main/static/image/preview-banner-v1.png">
 
 <p align="center">
-    <img alt="Code of Conduct" src="https://img.shields.io/badge/CONTRIBUTOR%20COVENANT-V1.0-%231A91FF?style=for-the-badge">
+    <a href="https://github.com/3R4-TBNKZ/.github/blob/main/profile/CODE_OF_CONDUCT.md"><img alt="Code of Conduct" src="https://img.shields.io/badge/CONTRIBUTOR%20COVENANT-V1.0-%231A91FF?style=for-the-badge">
     <img alt="Java Script" src="https://img.shields.io/badge/JAVASCRIPT-black?style=for-the-badge&logo=javascript">
     <img alt="HTML" src="https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html5">
     <img alt="Script" src="https://img.shields.io/badge/SCRIPT-black?style=for-the-badge&logo=typescript">
